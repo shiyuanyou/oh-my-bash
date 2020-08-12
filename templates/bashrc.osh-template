@@ -1,6 +1,9 @@
+if [ -f /etc/bashrc ]; then
+        . /etc/bashrc
+fi
 # Path to your oh-my-bash installation.
 export OSH=$HOME/.oh-my-bash
-
+export GOPATH=$HOME/golang
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-bash is loaded.
 OSH_THEME="font"
@@ -72,11 +75,16 @@ plugins=(
 
 source $OSH/oh-my-bash.sh
 
+alias bashconfig="vim ~/.bashrc"
+alias grep="grep --color=auto"
+alias cls="clear"
+
 # User configuration
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
@@ -99,3 +107,6 @@ source $OSH/oh-my-bash.sh
 # Example aliases
 # alias bashconfig="mate ~/.bashrc"
 # alias ohmybash="mate ~/.oh-my-bash"
+if [ -f /etc/bashrc ]; then
+        . /etc/bashrc
+fi
